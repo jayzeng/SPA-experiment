@@ -26,9 +26,6 @@ jobs:
         with:
           node-version: '14'
       
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-      
       # Runs a set of commands using the runners shell
       - name: build & deploy
         run: |
