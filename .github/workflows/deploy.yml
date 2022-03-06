@@ -26,11 +26,15 @@ jobs:
         with:
           node-version: '14'
       
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+      
       # Runs a set of commands using the runners shell
       - name: build & deploy
         run: |
           git config --global user.email "jayzeng@jay-zeng.com"
           git config --global user.name "Jay Zeng"
+          git remote set-url https://github.com/jayzeng/SPA-experiment.git
           npm install
           npm run predeploy
           npm run deploy
