@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy to https://spademo.jayzeng.com/
+name: Deploy to gh-pages
 
 # Controls when the workflow will run
 on:
@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.email "jayzeng@jay-zeng.com"
           git config --global user.name "Jay Zeng"
-          git remote set-url https://github.com/jayzeng/SPA-experiment.git
+          git remote set-url origin https://github.com/jayzeng/SPA-experiment.git
           npm install
           npm run predeploy
           npm run deploy
